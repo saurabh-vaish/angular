@@ -1,0 +1,25 @@
+
+details are : -
+
+<table>
+  <tr>
+    <th>S.No. </th>
+    <th>Name</th>
+    <th>City </th>
+    <th>Child</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let v of obj ; let i = index">
+    <td>{{i+1}}</td>
+    <td>{{v.name}}</td>
+    <td>{{v.city}}</td>
+    <td>
+      <select >
+        <option *ngFor="let c of v.child">{{c}}</option>
+      </select>
+    </td>
+    <td><button class="btn btn-success" >Update</button></td>
+    <td><button class="btn btn-danger" >Delete</button></td>
+  </tr>
+</table>
