@@ -1,0 +1,45 @@
+<h1>This is data binding app</h1>
+<h3>data binding in angular is of 4 types :<br>
+   1.Interpolation  &nbsp;   2. Property binding  &nbsp;  3. Event binding &nbsp;  4 . two way binding</h3>
+
+   <h2>1.Interpolation : {{ value }} </h2> <p>This adds the value of a property from the app.component.ts file .
+      We use {{value}} for this . Example :  </p>
+      <br>
+      Welcome {{name}} . <br>
+
+      <h2>2.Property binding :[property name]=”value name” </h2> <p>Property Binding allows us to set the value of a property on an HTML element to the value of a template expression.
+         Example : </p>
+          <br>
+          <input type="text" [value]="url"> <br>
+          <p>This can also be done by Interpolation</p>
+              or : <input type="text" value="{{url}}"> <br>
+
+      <h2>3. Event Binding :(event)=”function name” </h2> <p>When a specific DOM event happens (eg.: click, change, keyup),
+         call the specified specified method in the component. Example :  </p>
+
+        <button (click)="fun1()">Click me</button> <br>
+
+        <h2>4.Two way data binding :[(ngModel)]=”value” </h2> <p>Using what’s called the banana in a box syntax, two-way data binding allows to have the data flow both ways.  <br>
+        The square brackets indicate Property Binding and the parenthesis indicate Event Binding to send a notification of the user entered data back to the property. <br>
+        For this we use 'ngModel' which is in formsModule so before using it first import in app.module.ts then also add in imports.
+         Example : </p>
+
+        <input type="text" [(ngModel)]="username"> <br>
+        value entered is : {{username}} <br>
+
+        <p>In this example, the username data property is used as the value for the input, but if the user changes the value,in the app.component.ts property gets updated automatically to the new value .</p>
+
+        data {{x}} <br>
+        Enter value to change it :  <input type="text" [(ngModel)]="x"> <br>
+        <button (click)="fun2()">Click me</button> <br>
+
+        <h3>All the binding : </h3>
+        Welcome {{name}} <br><br>
+        <input type="text" [value]="url"> <br><br>
+        <button (click)="fun1()">Click me</button> <br><br>
+        <input type="text" [(ngModel)]="username"> <br>
+        value entered is : {{username}} <br>
+
+
+
+
