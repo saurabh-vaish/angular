@@ -1,0 +1,9 @@
+
+<select >
+  <option *ngFor="let v of city ">
+    {{v}}
+  </option>
+</select>
+<br>
+<input type="text" [(ngModel)]="add">
+<button class="btn btn-success" (click)="func1()">Add city</button>
