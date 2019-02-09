@@ -1,0 +1,24 @@
+<table class="table">
+    <tr>
+      <th>S.No. </th>
+      <th>Name</th>
+      <th>Home</th>
+      <th>Working Location</th>
+    </tr>
+    <tr *ngFor="let v of obj ; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{v.name}}</td>
+      <td>{{v.city}}</td>
+      <td>
+        <select >
+          <ng-container *ngFor="let c of v.wkl">
+            <option *ngIf="c!=v.city">
+              {{c}}
+           </option>
+        </ng-container>
+        </select>
+      </td>
+
+    </tr>
+  </table>
+
