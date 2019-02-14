@@ -1,0 +1,32 @@
+<div class="container">
+
+  <h1>LocalStorage</h1>
+  <p>
+    to make a variable globally available throughout all the components we use local stoarage .
+  </p>
+  <p>
+    it store variable inside browser memory. so that every component can access it.
+  </p>
+  <p>
+    For this we use localStorage class . it has some methods to store and retrieve variables.
+    <br>
+    <b>localStorage.setItem('key',value)</b> is used to store a variable in browser memory.
+    <br>
+    <b>localStorage.getItem(variable name)</b> is used to retrieve a variable from browser memory.
+    <br>
+    <b>localStorage.removeItem(var name)</b> is used to delete a variable in browser memory.
+    <br>
+    <b>localStorage.clear()</b> is used to delete all variables from browser memory.
+  </p>
+  <br>
+  <p>
+    here we are linking two components with routing and share a variable between then .
+  </p>
+  <a routerLink="c1">c1 Component</a> &nbsp;
+  <a routerLink="c2">C2 component</a>
+
+
+  <router-outlet>
+
+  </router-outlet>
+</div>
