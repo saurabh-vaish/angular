@@ -1,0 +1,19 @@
+Hi
+<input type="button" value="Get data" (click)="funget()">
+<input type="button" value="Post data" (click)="funpost()">
+<table>
+    <tr *ngFor="let x of tab_data">
+        <td>{{x.uname}}</td>
+        <td>{{x.city}}</td>
+        <td><input type="button" value="Update" (click)="funup(x.uname,x.city)"></td>
+    </tr>
+
+</table>
+<div>
+    Name:<input [(ngModel)]="t1">
+    <br>
+    City:<input [(ngModel)]="t2">
+    <br>
+    <input type="button" value="Save" (click)="funsave()">
+</div>
+

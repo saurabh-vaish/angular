@@ -1,0 +1,24 @@
+exp=require("express")
+app=exp()
+app.listen(1000)
+bp=require("body-parser")
+app.use(bp.json())
+mj=require("mongojs")
+con=mj("mongodb://localhost:27017/db_new")
+
+app.get("/getdata",function(req,res){
+con.tbl_user.find(function(err,result){
+    console.log(result)
+res.send(result)
+})
+})
+app.post("/postdata",function(req,res){
+    con.tbl_user.save(req.body)
+    res.send({resp:"Inserted"})
+})
+app.post("/updatedata",function(req,res){
+    console.log(req.body)
+    con.tbl_user.update(req.body[0],req.body[1],function(){
+        res.send({rsp:"Udated"})
+    })
+})
